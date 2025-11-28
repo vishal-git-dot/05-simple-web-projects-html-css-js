@@ -1,0 +1,76 @@
+<!--
+File 1: index.html
+File 2: styles.css
+File 3: script.js
+
+Save these three files in the same folder. Open index.html in a browser.
+-->
+
+<!-- ========================= index.html ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrightQuiz — Interactive Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>BrightQuiz</h1>
+      <div class="meta">
+        <div class="progress">Question: <span id="progress">0 / 0</span></div>
+        <div class="timer">Time: <span id="timer">00:30</span></div>
+      </div>
+    </header>
+
+    <section class="card" id="quiz-card">
+      <div id="start-screen" class="screen">
+        <h2>Test your knowledge!</h2>
+        <p>Multiple choice — 30 seconds per question. Score as many as you can.</p>
+        <div class="controls">
+          <label for="qcount">Questions:</label>
+          <select id="qcount">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+          </select>
+          <button id="start-btn" class="btn primary">Start Quiz</button>
+        </div>
+      </div>
+
+      <div id="question-screen" class="screen hidden">
+        <div id="question-box">
+          <h3 id="question">Question text</h3>
+          <ul id="choices" class="choices" aria-live="polite"></ul>
+        </div>
+        <div class="bottom">
+          <div class="hint" id="feedback"></div>
+          <div>
+            <button id="next-btn" class="btn" disabled>Next</button>
+            <button id="quit-btn" class="btn ghost">Quit</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="end-screen" class="screen hidden">
+        <h2>Quiz Complete!</h2>
+        <p id="final-text">You scored <strong id="final-score">0</strong> / <span id="final-total">0</span></p>
+        <div class="controls">
+          <button id="retry-btn" class="btn primary">Play Again</button>
+          <button id="review-btn" class="btn">Review Answers</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Built with Event Listeners · Arrays · Conditionals · Smooth UI</small>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
